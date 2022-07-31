@@ -33,3 +33,7 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+javadoc {
+    source = sourceSets.main.allJava
+}
