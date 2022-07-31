@@ -37,11 +37,13 @@ enum CommandLineInterface {
     CliBuilder cliBuilder
 
     /**
-     *
+     * There is command line interface options initialization to parse passed arguments entered
+     * by user to encode/decode passed data.
      */
     CommandLineInterface() {
         cliBuilder = new CliBuilder(
-                usage: '-[f|d] <path to report(s)> -o <output file>',
+                usage: '[-h help] -[e|d|q] <mode> [-i path to input file] [-s secret phrase] ' +
+                        '[-f path to output file] <input data>',
                 header: 'This application provides ability to encode/decode data, ' +
                         'generate/read QrCode images and other algorithms.\nOptions:',
                 footer: 'breadrock1 - 2022.'
