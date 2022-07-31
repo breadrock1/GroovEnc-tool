@@ -18,7 +18,6 @@ class Logger {
         log.info(String.format(message, params))
     }
 
-
     /**
      * This method prints out message with warning information.
      *
@@ -28,7 +27,6 @@ class Logger {
         log.warning(String.format(message, params))
     }
 
-
     /**
      * This method shows message window with warning information.
      *
@@ -37,4 +35,5 @@ class Logger {
     static errorMessage(String message, Object... params) {
         log.severe(String.format(message, params))
     }
+
 }

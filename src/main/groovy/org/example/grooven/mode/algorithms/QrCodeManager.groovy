@@ -16,6 +16,15 @@ import java.awt.Graphics2D
 import java.awt.image.BufferedImage
 
 
+/**
+ * A QR code (an initialism for quick response code) is a type of matrix barcode (or
+ * two-dimensional barcode) invented in 1994 by the Japanese automotive company Denso
+ * Wave. A barcode is a machine-readable optical label that can contain information
+ * about the item to which it is attached. In practice, QR codes often contain data for
+ * a locator, identifier, or tracker that points to a website or application. A QR code
+ * is case sensitive. It uses four standardized encoding modes (numeric, alphanumeric,
+ * byte/binary, and kanji) to store data efficiently; extensions may also be used.
+ */
 class QrCodeManager {
 
     Integer bitMatrixSize = 125
@@ -25,6 +34,13 @@ class QrCodeManager {
                 put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L)
             }}
 
+    /**
+     * This method returns generated QrCode {@link BufferedImage} buffered image
+     * from specified {@link String} string value.
+     *
+     * @param sourceData The {@link String} string data to generate QrCode image.
+     * @return The {@link BufferedImage} buffered image with generated QrCode.
+     */
     BufferedImage generateQrCodeImage(String sourceData) {
         QRCodeWriter qrCodeWriter = new QRCodeWriter()
 
@@ -56,6 +72,13 @@ class QrCodeManager {
         return bufferedImage
     }
 
+    /**
+     * This method returns {@link String} string value from specified {@link BufferedImage}
+     * buffered image (QrCode).
+     *
+     * @param bufferedImage The {@link BufferedImage} buffered image with QrCode to decode.
+     * @return The {@link String} string data stored into QrCode image.
+     */
     String readQrCodeImage(BufferedImage bufferedImage) {
         BufferedImageLuminanceSource bufferedImageLuminanceSource =
                 new BufferedImageLuminanceSource(bufferedImage)

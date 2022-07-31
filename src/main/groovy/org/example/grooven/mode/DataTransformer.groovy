@@ -9,15 +9,35 @@ import org.example.grooven.mode.algorithms.Rot13Algorithm
 import org.example.grooven.mode.algorithms.VigenereAlgorithm
 
 
+/**
+ * This class provides ability to parsed selected {@link Algorithm} algorithm by user
+ * from command line interface to encode/decode specified data.
+ */
 class DataTransformer {
 
+    /**
+     * The {@link String} string value with algorithm name passed to cli.
+     */
     String algorithm
 
+    /**
+     * The {@link String} string data stored into specified file or passed as cli argument.
+     */
     String inputFileData
 
+    /**
+     * The {@link String} string data of secret phrase passed as cli argument.
+     */
     String secretPhrase
 
 
+    /**
+     * This method returns implemented {@link Algorithm} algorithm class object from
+     * passed argument from command line interface to encode/decode passed data.
+     *
+     * @return The implemented {@link Algorithm} algorithm class object.
+     * @throws UnknownAlgorithmException throws while passes algorithm has not been founded.
+     */
     def <T extends Algorithm> T switchSelectedAlgorithm()
             throws UnknownAlgorithmException {
 
@@ -43,6 +63,12 @@ class DataTransformer {
         }
     }
 
+    /**
+     * This method returns {@link String} string value from specified file path.
+     *
+     * @param filePath The path to file.
+     * @return The stored {@link String} string data into file.
+     */
     static String getInputFileData(String filePath) {
         return new File(filePath).readLines().join('\n')
     }

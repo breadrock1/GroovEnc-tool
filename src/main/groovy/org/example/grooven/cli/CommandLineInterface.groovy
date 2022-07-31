@@ -27,10 +27,18 @@ import java.awt.image.BufferedImage
  * </ol>
  */
 enum CommandLineInterface {
+
     INSTANCE
 
+    /**
+     * This is {@link CliBuilder} cli builder class which provides a builder functionality to
+     * assist the processing of command line arguments.
+     */
     CliBuilder cliBuilder
 
+    /**
+     *
+     */
     CommandLineInterface() {
         cliBuilder = new CliBuilder(
                 usage: '-[f|d] <path to report(s)> -o <output file>',
@@ -55,7 +63,7 @@ enum CommandLineInterface {
     }
 
     /**
-     * This method parse command line arguments entered by user to select running mode.
+     * This method parses command line arguments entered by user to select running mode.
      *
      * @param args The entered arguments.
      */
@@ -115,7 +123,13 @@ enum CommandLineInterface {
         }
     }
 
-    private def printOutUsageInformation(String errorMessage) {
+    /**
+     * This procedure prints out usage information to terminal output stream while parsing
+     * current arguments has been failed.
+     *
+     * @param errorMessage The error message string value.
+     */
+    private void printOutUsageInformation(String errorMessage) {
         Logger.errorMessage('Error while parsing command-line options: ')
         Logger.errorMessage(errorMessage)
 

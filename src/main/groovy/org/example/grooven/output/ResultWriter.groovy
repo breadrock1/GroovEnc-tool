@@ -7,7 +7,7 @@ import org.example.grooven.log.Logger
 
 
 /**
- * This class provides ability to transform collection of {@link byte [ ]} transformed data to
+ * This class provides ability to transform collection of {@link String} transformed data to
  * output stream or to specified file.
  */
 class ResultWriter {
