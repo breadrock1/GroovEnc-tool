@@ -2,7 +2,7 @@
 
 HELP="false"
 PROJECT_HOME=$1
-PROJECT_IMAGE_TAG=lighthome-$(date +%s)
+PROJECT_IMAGE_TAG=grooven-$(date +%s)
 PROJECT_CONTAINER_NAME=container-$PROJECT_IMAGE_TAG
 
 while [[ $# -gt 0 ]]; do
@@ -40,4 +40,4 @@ docker build --rm --tag $PROJECT_IMAGE_TAG $PROJECT_HOME
 docker run -d --name $PROJECT_CONTAINER_NAME $PROJECT_IMAGE_TAG
 
 mkdir -p $PROJECT_HOME/docker-build
-docker container cp $PROJECT_CONTAINER_NAME:/home/gradle/lighthome/dist $PROJECT_HOME/docker-build/
+docker container cp $PROJECT_CONTAINER_NAME:/home/gradle/grooven $PROJECT_HOME/docker-build/
