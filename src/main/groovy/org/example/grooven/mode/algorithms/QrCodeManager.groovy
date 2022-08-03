@@ -17,7 +17,7 @@ import java.awt.image.BufferedImage
 
 
 /**
- * A QR code (an initialism for quick response code) is a type of matrix barcode (or
+ * The QR code (an initialism for quick response code) is a type of matrix barcode (or
  * two-dimensional barcode) invented in 1994 by the Japanese automotive company Denso
  * Wave. A barcode is a machine-readable optical label that can contain information
  * about the item to which it is attached. In practice, QR codes often contain data for
