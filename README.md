@@ -1,10 +1,10 @@
-# Grooven-tool
+# GroovEnc-tool
 
 ![GitHub](https://badgen.net/badge/icon/github?icon=github&label)
 ![version](https://img.shields.io/badge/version-1.1-blue)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Grooven-tool is a simple tool for transforming encoded data into its canonical form, or for 
+GroovEnc-tool is a simple tool for transforming encoded data into its canonical form, or for 
 transforming raw data into various encoded and hashed forms. It is capable of intelligently 
 recognizing several encoding formats using heuristic techniques.
 
